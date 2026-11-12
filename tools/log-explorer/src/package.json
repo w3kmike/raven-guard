@@ -1,0 +1,12 @@
+{
+  "name": "log-investigation-workspace",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@tanstack/react-query": "5.104.5?deps=react@19.3.1",
+    "d3": "7.9.0",
+    "gsap": "3.13.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}

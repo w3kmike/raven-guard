@@ -1,0 +1,7 @@
+{
+  "html": true,
+  "breaks": true,
+  "linkify": true,
+  "typographer": true,
+  "langPrefix": ""
+}

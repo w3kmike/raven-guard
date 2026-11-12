@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "names": [
+    "createHashHistory",
+    "createRootRoute",
+    "createRoute",
+    "createRouter",
+    "searchSchema",
+    "Shell",
+    "NowView",
+    "TrendsView",
+    "WireView",
+    "rootRoute",
+    "component",
+    "validateSearch",
+    "search",
+    "parse",
+    "nowRoute",
+    "getParentRoute",
+    "path",
+    "trendsRoute",
+    "wireRoute",
+    "router",
+    "routeTree",
+    "addChildren",
+    "history",
+    "defaultNotFoundComponent"
+  ],
+  "sources": [
+    "../../../src/app/routes.tsx"
+  ],
+  "mappings": "AAAA;;;;;;AAOA;AACA,SACEA,iBAAiB,EACjBC,eAAe,EACfC,WAAW,EACXC,YAAY,QACP,wBAAwB;AAC/B,SAASC,YAAY,QAAQ,cAAc;AAC3C,SAASC,KAAK,QAAQ,kBAAkB;AACxC,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,UAAU,QAAQ,mBAAmB;AAC9C,SAASC,QAAQ,QAAQ,iBAAiB;AAE1C;;;AAGA,MAAMC,SAAS,GAAGR,eAAe,CAAC;EAChCS,SAAS,EAAEL,KAAK;EAChBM,cAAc,EAAGC,MAA+B,IAC9CR,YAAY,CAACS,KAAK,CAACD,MAAM;CAC5B,CAAC;AAEF,MAAME,QAAQ,GAAGZ,WAAW,CAAC;EAC3Ba,cAAc,EAAEA,CAAA,KAAMN,SAAS;EAC/BO,IAAI,EAAE,GAAG;EACTN,SAAS,EAAEJ;CACZ,CAAC;AACF,MAAMW,WAAW,GAAGf,WAAW,CAAC;EAC9Ba,cAAc,EAAEA,CAAA,KAAMN,SAAS;EAC/BO,IAAI,EAAE,SAAS;EACfN,SAAS,EAAEH;CACZ,CAAC;AACF,MAAMW,SAAS,GAAGhB,WAAW,CAAC;EAC5Ba,cAAc,EAAEA,CAAA,KAAMN,SAAS;EAC/BO,IAAI,EAAE,OAAO;EACbN,SAAS,EAAEF;CACZ,CAAC;AAEF;;;AAGA,OAAO,MAAMW,MAAM,GAAGhB,YAAY,CAAC;EACjCiB,SAAS,EAAEX,SAAS,CAACY,WAAW,CAAC,CAACP,QAAQ,EAAEG,WAAW,EAAEC,SAAS,CAAC,CAAC;EACpEI,OAAO,EAAEtB,iBAAiB,EAAE;EAC5BuB,wBAAwB,EAAEjB;CAC3B,CAAC",
+  "ignoreList": []
+}

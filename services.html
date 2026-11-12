@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Raven Guard Consulting</title>
+  <meta name="description" content="Twenty-two services across security, engineering, AI and leadership, each backed by tooling we already built.">
+  <meta name="theme-color" content="#16161D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/raven.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74' fill='%236a329f'/%3E%3Ccircle cx='57' cy='37' r='4' fill='%2316161D'/%3E%3C/svg%3E">
+</head>
+<body>
+<canvas id="perimeter" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-engineering" viewBox="0 0 24 24">
+    <rect x="3" y="14" width="7" height="7" rx="1"/>
+    <rect x="10" y="7" width="7" height="7" rx="1"/>
+    <rect x="14" y="3" width="7" height="4" rx="1"/>
+    <path d="M3 10h4M17 17h4"/>
+  </symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24">
+    <circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
+    <path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/>
+  </symbol>
+  <symbol id="i-leadership" viewBox="0 0 24 24">
+    <path d="M12 3l2.2 5.2L20 9l-4 3.9.9 5.6L12 15.8 7.1 18.5 8 12.9 4 9l5.8-.8z"/>
+    <path d="M12 3v12.8"/>
+  </symbol>
+  <symbol id="i-security" viewBox="0 0 24 24">
+    <path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/>
+    <path d="M9 12l2 2 4-4"/>
+  </symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Raven Guard Consulting, home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74" fill="#6a329f"/>
+        <polygon points="30,30 52,22 70,30 70,46 52,44" fill="#8247BD"/>
+        <circle cx="57" cy="37" r="4" fill="#16161D"/>
+      </svg>
+      <span>Raven Guard<small>Consulting</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg><use href="#i-menu"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Pages">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <a class="btn" href="contact.html">Book a call</a>
+  </div>
+</header>
+
+<main id="top" class="page">
+
+  <section class="block" id="tools" aria-labelledby="tools-h">
+    <div class="wrap">
+      <div class="page-head">
+        <h1 id="tools-h">What we can run for you, area by area.</h1>
+        <p class="lede">Every service here is something we have already built the machinery for. You do not buy software from us. You get the outcome, and we arrive on day one with the tooling that produces it.</p>
+      </div>
+
+      <div class="lines">
+
+        <div class="lines-group">
+          <div class="lines-head">
+            <svg aria-hidden="true"><use href="#i-security"/></svg>
+            <h3>Security</h3>
+            <p>Findings arrive with fixes. Reports are graded, not dumped.</p>
+          </div>
+          <div class="lines-grid">
+            <article class="line">
+              <h4>External exposure and OSINT assessment</h4>
+              <p>We map what an attacker sees first: exposed hosts and ports, forgotten subdomains, breached employee emails, leaked passwords, the reputation of your IPs and domains, and what old versions of your site still reveal. You get a graded report with a fix per finding.</p>
+            </article>
+            <article class="line">
+              <h4>Threat watch and incident investigation</h4>
+              <p>A live view of where exploitation and malicious packages are concentrating in the ecosystems you depend on, and a shared workspace for working an incident across logs, services and time, with evidence pinned to a case. <a href="tools/threat-pulse/dist/index.html">See the threat watch</a> or <a href="tools/log-explorer/dist/index.html">the investigation workspace</a> running now.</p>
+            </article>
+            <article class="line">
+              <h4>Local network and device intelligence</h4>
+              <p>We inventory everything on your office or plant network, from Wi‑Fi and wired hosts to Bluetooth, smart devices and anything answering multicast, fuse it into one graded report, and find the devices nobody owns.</p>
+            </article>
+            <article class="line">
+              <h4>Dependency and vulnerability management</h4>
+              <p>Known vulnerabilities in your dependencies cross-checked against two authoritative sources, hardcoded secrets and committed key files found before an auditor does, and a triage queue with SLAs wired into the tools you already use.</p>
+            </article>
+            <article class="line">
+              <h4>Credential vault and token service</h4>
+              <p>We replace shared spreadsheets and chat-pasted secrets with a vault your people and your automations both use. Credentials are shared by policy, and API tokens are issued, validated and revoked through one audited service.</p>
+            </article>
+            <article class="line">
+              <h4>Digital forensics and file analysis</h4>
+              <p>Suspicious files checked against malware intelligence, embedded files carved out by signature, hidden data found by entropy and string analysis, and images and audio examined for steganography and metadata, all offline when it must stay offline.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="lines-group">
+          <div class="lines-head">
+            <svg aria-hidden="true"><use href="#i-engineering"/></svg>
+            <h3>Engineering</h3>
+            <p>Built for the codebase in front of us, handed over with the people who will own it.</p>
+          </div>
+          <div class="lines-grid">
+            <article class="line">
+              <h4>Codebase health grading and remediation</h4>
+              <p>Any repository graded A to F across fifteen quality and security dimensions: unused code, complexity, duplication, tech debt, tests, docs, accessibility, credentials, sensitive files, malware patterns and known vulnerabilities. Each finding has a file, a line and a fix, and we work the list down with you.</p>
+            </article>
+            <article class="line">
+              <h4>Self-hosted observability</h4>
+              <p>Logs, traces, metrics and build events for any codebase, without a SaaS bill or a platform team. One agent dropped into the project, one engine you own, one live dashboard. Built as an alternative to the big monitoring suites, not a wrapper around them.</p>
+            </article>
+            <article class="line">
+              <h4>Test automation for enterprise platforms</h4>
+              <p>End-to-end suites for ServiceNow and similar UIs. We record real sessions with locators that survive upgrades, generate ready-to-run tests, convert the Playwright, Selenium or ATF scripts you already have into one framework, and wire the runs into CI with a report per run.</p>
+            </article>
+            <article class="line">
+              <h4>SaaS platform analysis and governance</h4>
+              <p>Salesforce, ServiceNow, Workday, Conga and Veeva orgs analysed for dependency risk, field conflicts, code red flags and schema health, with a modernisation backlog and a governance report leadership can read.</p>
+            </article>
+            <article class="line">
+              <h4>Cross-platform integration and record migration</h4>
+              <p>Connect your SaaS platforms through one encrypted connection layer, run automations across them, such as a case in one system creating a linked incident in another, and migrate records with recommended field maps, dry runs, upserts, rollback and a runbook.</p>
+            </article>
+            <article class="line">
+              <h4>Internal platforms built to order</h4>
+              <p>The tools your team keeps meaning to build: mail-merge with tracking and scheduling, documentation capture into Markdown, content-addressed storage and compression, and desktop packaging of server tools so a field team can run them with nothing installed.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="lines-group">
+          <div class="lines-head">
+            <svg aria-hidden="true"><use href="#i-ai"/></svg>
+            <h3>AI</h3>
+            <p>Measured before it ships, grounded in your knowledge, priced with real numbers.</p>
+          </div>
+          <div class="lines-grid">
+            <article class="line">
+              <h4>Agent QA and performance evaluation</h4>
+              <p>A repeatable QA process for your agents: a prompt library with expected answers and points, parallel runs across candidate agents and models, manual scoring on six dimensions, baselines, trends and a scorecard that shows whether the last change helped.</p>
+            </article>
+            <article class="line">
+              <h4>Grounding and context curation</h4>
+              <p>We make the agent answer from your knowledge instead of its defaults. Grounding datasets are built, pruned and refreshed, tuning records govern refusals and reasoning, and workspace instructions are written and verified live against the running agent.</p>
+            </article>
+            <article class="line">
+              <h4>Load testing, benchmarking and model selection</h4>
+              <p>Every endpoint measured under real traffic, latency and throughput recorded per model, and a selection made on numbers rather than vendor claims. The results ship as an API reference with live latency alongside each call.</p>
+            </article>
+            <article class="line">
+              <h4>Grounded assistants with actions</h4>
+              <p>Copilots that read from and write to your live systems through governed connections, stream their replies, and hand back copy-ready artifacts. Exposed as a REST API and an MCP server so other AI clients and tools can use the same agent.</p>
+            </article>
+            <article class="line">
+              <h4>AI-generated regression suites</h4>
+              <p>We ingest a live instance, score where the risk sits, and emit a runnable regression suite for it, so a platform that never had test coverage gets it in a week instead of a quarter.</p>
+            </article>
+            <article class="line">
+              <h4>Usage metering and cost modelling</h4>
+              <p>Before you price an AI feature or sign a model contract, we simulate realistic traffic from eight users to fourteen hundred, over a month and a year, compare the metering options on the table, and show which customers run out of allowance and when.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="lines-group">
+          <div class="lines-head">
+            <svg aria-hidden="true"><use href="#i-leadership"/></svg>
+            <h3>Leadership</h3>
+            <p>Decisions backed by numbers, cadence that survives after we leave.</p>
+          </div>
+          <div class="lines-grid">
+            <article class="line">
+              <h4>Executive and team reporting</h4>
+              <p>Dashboards for the executive, the team and the system: KPIs, usage, agent scorecards and support case analysis built from the exports you already have. Self-contained pages with a legend that explains every number, so they get read.</p>
+            </article>
+            <article class="line">
+              <h4>Pricing and packaging decisions</h4>
+              <p>When the question is how to meter, price or package a product, we build the simulation, run the scenarios and write the decision memo, with the assumptions on the page where the board can challenge them.</p>
+            </article>
+            <article class="line">
+              <h4>Operating cadence and delivery rituals</h4>
+              <p>Planning, review and incident rituals set up with the templates and the dashboards to run them, a weekly written update from day one, and a handover that leaves the cadence running without us.</p>
+            </article>
+            <article class="line">
+              <h4>Fractional and interim leadership</h4>
+              <p>An interim CTO or VP Engineering, two to three days a week, with a successor plan from the first week. Team structure, hiring loops, levelling and coaching for first-time managers come with it.</p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Raven Guard Consulting</span>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="careers.html">Careers</a>
+    <span class="spacer"></span>
+    <span>Engineering, AI, leadership and security.</span>
+  </div>
+</footer>
+
+<script src="js/perimeter.js" defer></script>
+<script src="js/raven.js" defer></script>
+</body>
+</html>

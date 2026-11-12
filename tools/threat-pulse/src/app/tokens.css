@@ -1,0 +1,126 @@
+/*!
+ * Threat Pulse
+ * Copyright (c) 2026 Cliff Pyles
+ * Released under the MIT License: https://opensource.org/license/mit
+ * Original: https://codepen.io/editor/cliffpyles/pen/01a1b748-091b-7303-b14c-0aff50bb8692
+ */
+
+/* Intended use: the Threat Pulse design system. Chart-paper ground, ink traces, one vermilion for exploitation and one ultramarine for supply-chain compromise; bulletin type, ruling-based spacing, pen-like motion. */
+
+/* ----------------------------------------
+   Color: paper, ink and the two signal inks
+   ---------------------------------------- */
+:root {
+  color-scheme: light;
+  --paper: #f3f0e6;
+  --paper-sheet: #fbf9f2;
+  --paper-sunk: #e9e4d6;
+  --rule-fine: #e1dbca;
+  --rule-major: #cbc3ad;
+  --ink: #1c1b17;
+  --ink-secondary: #57524a;
+  --ink-faint: #8b8476;
+  --trace-band-1: #c9c1ab;
+  --trace-band-2: #8a8270;
+  --trace-band-3: #2b2924;
+  --trace-below: #dcd6c4;
+  --exploited: #d23a1f;
+  --exploited-wash: #f6d9cf;
+  --compromise: #2b44a8;
+  --compromise-wash: #d9def3;
+  --focus-ring: #2b44a8;
+  --sheet-shadow: 0 1px 0 #d9d2bf, 0 12px 32px -18px rgb(40 34 20 / 35%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #131418;
+    --paper-sheet: #1a1b20;
+    --paper-sunk: #0e0f12;
+    --rule-fine: #23252b;
+    --rule-major: #353841;
+    --ink: #ebe7db;
+    --ink-secondary: #aaa59a;
+    --ink-faint: #737069;
+    --trace-band-1: #3d3f47;
+    --trace-band-2: #7d7c7a;
+    --trace-band-3: #e6e1d3;
+    --trace-below: #24262c;
+    --exploited: #ff6a4a;
+    --exploited-wash: #3a1d17;
+    --compromise: #8ea2ff;
+    --compromise-wash: #1d2343;
+    --focus-ring: #8ea2ff;
+    --sheet-shadow: 0 0 0 1px #262830, 0 16px 40px -20px rgb(0 0 0 / 70%);
+  }
+}
+
+/* ----------------------------------------
+   Type: bulletin labels, serif prose, figures
+   ---------------------------------------- */
+:root {
+  --font-label: "Archivo", "Arial Narrow", sans-serif;
+  --font-prose: "Source Serif 4", Georgia, serif;
+  --font-figure: "IBM Plex Mono", ui-monospace, monospace;
+  --width-condensed: 72;
+  --width-station: 88;
+  --type-micro: 0.6875rem;
+  --type-label: 0.75rem;
+  --type-figure: 0.8125rem;
+  --type-station: 0.9375rem;
+  --type-prose: 1rem;
+  --type-lede: 1.3125rem;
+  --type-masthead: 1.125rem;
+  --tracking-label: 0.08em;
+  --leading-tight: 1.15;
+  --leading-prose: 1.45;
+}
+
+/* ----------------------------------------
+   Space and size: multiples of the paper's ruling
+   ---------------------------------------- */
+:root {
+  --rule: 4px;
+  --gap-hair: calc(var(--rule) * 1);
+  --gap-tight: calc(var(--rule) * 2);
+  --gap: calc(var(--rule) * 3);
+  --gap-loose: calc(var(--rule) * 4);
+  --gap-section: calc(var(--rule) * 6);
+  --gutter: calc(var(--rule) * 4);
+  --tap: 44px;
+  --row-height: 48px;
+  --strip-height: 30px;
+  --name-column: 168px;
+  --ledger-column: 148px;
+  --count-column: 92px;
+  --sheet-width: 440px;
+  --radius-chip: 2px;
+  --radius-sheet: 3px;
+  --hairline: 1px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: calc(var(--rule) * 6);
+  }
+}
+
+/* ----------------------------------------
+   Motion: a recording pen, settling not bouncing
+   ---------------------------------------- */
+:root {
+  --dur-feedback: 120ms;
+  --dur-reveal: 280ms;
+  --dur-reorder: 640ms;
+  --dur-spin: 1200ms;
+  --ease-pen: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-feedback: 0ms;
+    --dur-reveal: 0ms;
+    --dur-reorder: 0ms;
+  }
+}

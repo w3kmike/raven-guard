@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "names": [
+    "motion",
+    "ease"
+  ],
+  "sources": [
+    "../../../src/app/tokens.ts"
+  ],
+  "mappings": "AAAA;;;;;;AAOA;AACA,OAAO,MAAMA,MAAM,GAAG;EACpBC,IAAI,EAAE;CACE",
+  "ignoreList": []
+}

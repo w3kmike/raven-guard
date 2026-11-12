@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "names": [
+    "useNavigate",
+    "useSearch",
+    "searchSchema",
+    "useSearchState",
+    "raw",
+    "strict",
+    "navigate",
+    "search",
+    "parse",
+    "update",
+    "patch",
+    "to",
+    "previous",
+    "replace"
+  ],
+  "sources": [
+    "../../../src/app/navigation.ts"
+  ],
+  "mappings": "AAAA;;;;;;AAOA;AACA,SAASA,WAAW,EAAEC,SAAS,QAAQ,wBAAwB;AAC/D,SAASC,YAAY,QAAqB,cAAc;AAExD,OAAO,MAAMC,cAAc,GAAGA,CAAA,KAG1B;EACF,MAAMC,GAAG,GAAGH,SAAS,CAAC;IAAEI,MAAM,EAAE;EAAK,CAAE,CAAC;EACxC,MAAMC,QAAQ,GAAGN,WAAW,EAAE;EAC9B,MAAMO,MAAM,GAAGL,YAAY,CAACM,KAAK,CAACJ,GAAG,CAAC;EACtC,MAAMK,MAAM,GAAIC,KAAsB,IACpCJ,QAAQ,CAAC;IACPK,EAAE,EAAE,GAAG;IACPJ,MAAM,EAAGK,QAAiC,IACxCV,YAAY,CAACM,KAAK,CAAC;MAAE,GAAGI,QAAQ;MAAE,GAAGF;IAAK,CAAE,CAAC;IAC/CG,OAAO,EAAE;GACV,CAAC;EACJ,OAAO,CAACN,MAAM,EAAEE,MAAM,CAAC;AACzB,CAAC",
+  "ignoreList": []
+}

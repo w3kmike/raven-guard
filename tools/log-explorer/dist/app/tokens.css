@@ -1,0 +1,270 @@
+/* Type */
+:root {
+  --font-data: "IBM Plex Mono", ui-monospace, monospace;
+  --font-chrome: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+
+  --type-line-size: 13px;
+  --type-line-leading: 1.5;
+  --type-query-size: 14px;
+  --type-query-size-touch: 16px;
+  --type-chrome-size: 14px;
+  --type-meta-size: 12px;
+  --type-caps-size: 11px;
+  --type-caps-tracking: 0.08em;
+  --type-stat-size: 32px;
+  --type-axis-size: 11px;
+  --weight-chrome: 400;
+  --weight-emphasis: 600;
+}
+
+/* Grid: every measure derives from the 24px log row */
+:root {
+  --row-line: 24px;
+  --row-line-touch: 52px;
+  --target-touch: 44px;
+  --gap-hair: 2px;
+  --gap-tight: 4px;
+  --gap-cell: 8px;
+  --gap-row: 12px;
+  --gap-panel: 16px;
+  --gap-band: 24px;
+  --gutter-phone: 16px;
+
+  --col-fields: 248px;
+  --col-side: 372px;
+  --col-time: 13ch;
+  --col-level: 6ch;
+  --col-service: 10ch;
+  --col-note: 9ch;
+  --col-count: 6ch;
+  --col-share: 4ch;
+  --notice-min: 24ch;
+  --bar-breakdown: 6px;
+  --rule: 1px;
+  --rule-focus: 2px;
+  --rule-mode: 3px;
+  --sheet-width: 440px;
+  --popover-width: 360px;
+  --menu-max-height: 320px;
+  --editor-max-height: 168px;
+
+  --height-workspace: 100dvh;
+  --hist-height: 104px;
+  --hist-height-phone: 76px;
+  --chart-height: 280px;
+  --chart-margin-top: 12px;
+  --chart-margin-right: 148px;
+  --chart-margin-right-narrow: 12px;
+  --chart-margin-bottom: 22px;
+  --chart-margin-left: 44px;
+  --chart-bar-gap: 1px;
+  --chart-line-width: 1.75px;
+  --chart-label-gap: 14px;
+  --chart-tick-length: 4px;
+  --axis-edge-room: 24px;
+  --gap-label-min: 96px;
+
+  --radius-mark: 2px;
+  --radius-chip: 3px;
+  --radius-panel: 6px;
+}
+
+/* Motion: quick, mechanical — a log tool should never feel like it is performing */
+:root {
+  --dur-feedback: 120ms;
+  --dur-reveal: 220ms;
+  --dur-shape: 320ms;
+  --ease-settle: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --motion-drop: -6px;
+  --motion-slide: 12px;
+  --motion-bump: 1.35;
+}
+
+/* Layers and states */
+:root {
+  --layer-sticky: 2;
+  --layer-popover: 20;
+  --layer-sheet: 30;
+  --opacity-disabled: 0.45;
+  --opacity-dim: 0.3;
+  --opacity-pending: 0.6;
+  --type-chrome-leading: 1.35;
+  --type-empty-size: 16px;
+  --measure-empty: 40ch;
+  --popover-max-height: 70dvh;
+  --dash-gap: 3 3;
+  --swatch-size: 8px;
+  --clamp-exhibit: 3;
+  --stat-min: 180px;
+  --icon-size: 16px;
+  --icon-stroke: 1.75;
+  --chevron-turn: 90deg;
+  --kv-key-width: 34%;
+  --spark-width: 96px;
+  --source-width-phone: 14ch;
+  --spark-height: 20px;
+  --dist-height: 72px;
+  --strip-row: 22px;
+  --strip-label: 72px;
+  --rule-spark-height: 36px;
+  --cell-shrink: 1%;
+}
+
+/* Color: dark first — the stream is cool slate, the case file is warm manila */
+:root {
+  color-scheme: dark;
+
+  --surface-room: #0b0f14;
+  --surface-stream: #10161d;
+  --surface-stream-raised: #161e27;
+  --surface-row-hover: #18222d;
+  --surface-row-selected: #1d2c3b;
+  --surface-case: #1a1712;
+  --surface-case-raised: #231f18;
+  --surface-popover: #1a232d;
+  --surface-scrim: rgb(5 8 12 / 0.72);
+
+  --ink-primary: #e4e9ef;
+  --ink-secondary: #9aa7b6;
+  --ink-faint: #6b7989;
+  --ink-case: #efe4cc;
+  --ink-case-secondary: #b5a688;
+  --ink-on-accent: #0b0f14;
+
+  --rule-stream: #233041;
+  --rule-strong: #34465b;
+  --rule-case: #3a3226;
+
+  --level-error: #ff6b5e;
+  --level-warn: #f2b544;
+  --level-info: #5fa3e0;
+  --level-debug: #8792a2;
+  --level-unknown: #5b6573;
+
+  --mode-lucene: #3fc1a5;
+  --mode-logql: #a58bfa;
+
+  --syn-field: #79c0ff;
+  --syn-value: #f5b6d0;
+  --syn-keyword: #e4e9ef;
+  --syn-function: #c4b0ff;
+  --syn-number: #b5d6a0;
+  --syn-regex: #ffb86c;
+  --syn-punct: #6b7989;
+
+  --signal-error: #ff6b5e;
+  --signal-warning: #f2b544;
+  --signal-kept: #3fc1a5;
+  --signal-firing: #ff6b5e;
+  --signal-live: #3fc1a5;
+
+  --severity-low: #8792a2;
+  --severity-medium: #f2b544;
+  --severity-high: #ff9a5a;
+  --severity-critical: #ff6b5e;
+  --tone-malicious: #ff6b5e;
+  --tone-suspicious: #f2b544;
+  --tone-unknown: #9aa7b6;
+  --mark-focus: rgb(121 192 255 / 0.12);
+
+  --mark-match: rgb(242 181 68 / 0.28);
+  --mark-gap: rgb(154 167 182 / 0.16);
+  --focus-ring: #79c0ff;
+  --brush-fill: rgb(121 192 255 / 0.16);
+
+  --series-1: #5fa3e0;
+  --series-2: #f2b544;
+  --series-3: #3fc1a5;
+  --series-4: #ff8a7a;
+  --series-5: #c4b0ff;
+  --series-6: #9fd36b;
+  --series-7: #f58fc4;
+  --series-8: #b9c3cf;
+
+  --depth-popover: 0 12px 32px rgb(0 0 0 / 0.45), 0 0 0 1px #34465b;
+  --depth-sheet: -16px 0 48px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --surface-room: #e9edf1;
+    --surface-stream: #f8fafb;
+    --surface-stream-raised: #ffffff;
+    --surface-row-hover: #eef3f7;
+    --surface-row-selected: #dbe8f4;
+    --surface-case: #f6efdf;
+    --surface-case-raised: #fbf6ea;
+    --surface-popover: #ffffff;
+    --surface-scrim: rgb(20 28 38 / 0.4);
+
+    --ink-primary: #17202a;
+    --ink-secondary: #4f5d6c;
+    --ink-faint: #7a8796;
+    --ink-case: #2e2617;
+    --ink-case-secondary: #6e5f42;
+    --ink-on-accent: #ffffff;
+
+    --rule-stream: #d5dde5;
+    --rule-strong: #b3c0cd;
+    --rule-case: #e0d3b5;
+
+    --level-error: #c8372b;
+    --level-warn: #a86d00;
+    --level-info: #2a6fb0;
+    --level-debug: #66717f;
+    --level-unknown: #9aa4b0;
+
+    --mode-lucene: #138a72;
+    --mode-logql: #6b4fd8;
+
+    --syn-field: #1f5fa8;
+    --syn-value: #a8326e;
+    --syn-keyword: #17202a;
+    --syn-function: #6b4fd8;
+    --syn-number: #3f7a1f;
+    --syn-regex: #b35c00;
+    --syn-punct: #7a8796;
+
+    --signal-error: #c8372b;
+    --signal-warning: #a86d00;
+    --signal-kept: #138a72;
+    --signal-firing: #c8372b;
+    --signal-live: #138a72;
+
+    --severity-low: #66717f;
+    --severity-medium: #a86d00;
+    --severity-high: #c25a14;
+    --severity-critical: #c8372b;
+    --tone-malicious: #c8372b;
+    --tone-suspicious: #a86d00;
+    --tone-unknown: #4f5d6c;
+    --mark-focus: rgb(31 95 168 / 0.1);
+
+    --mark-match: rgb(242 181 68 / 0.38);
+    --mark-gap: rgb(79 93 108 / 0.12);
+    --focus-ring: #1f5fa8;
+    --brush-fill: rgb(31 95 168 / 0.14);
+
+    --series-1: #2a6fb0;
+    --series-2: #b37400;
+    --series-3: #138a72;
+    --series-4: #d0503f;
+    --series-5: #6b4fd8;
+    --series-6: #4f8a1c;
+    --series-7: #b8407e;
+    --series-8: #5d6b7a;
+
+    --depth-popover: 0 12px 32px rgb(20 28 38 / 0.16), 0 0 0 1px #b3c0cd;
+    --depth-sheet: -16px 0 48px rgb(20 28 38 / 0.18);
+  }
+}
+
+/* Touch sizes */
+@media (max-width: 1023px) {
+  :root {
+    --type-query-size: var(--type-query-size-touch);
+    --hist-height: var(--hist-height-phone);
+  }
+}

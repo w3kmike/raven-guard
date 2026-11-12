@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raven Guard Consulting</title>
+  <meta name="description" content="Engineering, AI, leadership and security consulting. Senior people who ship, with the tooling to do the work.">
+  <meta name="theme-color" content="#16161D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/raven.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74' fill='%236a329f'/%3E%3Ccircle cx='57' cy='37' r='4' fill='%2316161D'/%3E%3C/svg%3E">
+</head>
+<body>
+<canvas id="perimeter" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-engineering" viewBox="0 0 24 24">
+    <rect x="3" y="14" width="7" height="7" rx="1"/>
+    <rect x="10" y="7" width="7" height="7" rx="1"/>
+    <rect x="14" y="3" width="7" height="4" rx="1"/>
+    <path d="M3 10h4M17 17h4"/>
+  </symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24">
+    <circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
+    <path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/>
+  </symbol>
+  <symbol id="i-leadership" viewBox="0 0 24 24">
+    <path d="M12 3l2.2 5.2L20 9l-4 3.9.9 5.6L12 15.8 7.1 18.5 8 12.9 4 9l5.8-.8z"/>
+    <path d="M12 3v12.8"/>
+  </symbol>
+  <symbol id="i-security" viewBox="0 0 24 24">
+    <path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/>
+    <path d="M9 12l2 2 4-4"/>
+  </symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Raven Guard Consulting, home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74" fill="#6a329f"/>
+        <polygon points="30,30 52,22 70,30 70,46 52,44" fill="#8247BD"/>
+        <circle cx="57" cy="37" r="4" fill="#16161D"/>
+      </svg>
+      <span>Raven Guard<small>Consulting</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg><use href="#i-menu"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Pages">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <a class="btn" href="contact.html">Book a call</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 id="hero-h" class="reveal">Engineering, AI, leadership and security, delivered by people who ship.</h1>
+        <p class="lede reveal">We supply the senior engineers, the specialized tools and the hands-on leadership your team is missing, for as long as you need them and not a day longer.</p>
+        <div class="hero-actions reveal">
+          <a class="btn" href="contact.html">Book a call</a>
+          <a class="btn ghost" href="#deliver">See what we deliver</a>
+        </div>
+        <div class="hero-facts reveal">
+          <span><b>4</b> practices</span>
+          <span><b>4</b> ways to engage</span>
+          <span><b>22</b> service lines ready to run</span>
+          <span><b>100%</b> senior staff on every engagement</span>
+        </div>
+      </div>
+      <div class="hero-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <polygon class="raven-fill-c" points="18,62 24,74 40,82 60,78 72,60 70,46 52,44 30,30"/>
+          <polygon class="raven-fill-a" points="18,62 30,30 52,22 70,30 96,40 70,46 52,44"/>
+          <polygon class="raven-fill-b" points="30,30 52,22 70,30 70,46 52,44"/>
+          <circle class="raven-eye" cx="57" cy="37" r="4"/>
+          <polygon class="raven-stroke" points="18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="services-h">Four practices, one team.</h2>
+        <p>Most of our work crosses at least two of these. A security engagement usually ends in engineering. An AI build is usually a leadership question in disguise.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="ico"><svg><use href="#i-engineering"/></svg></div>
+          <h3>Engineering</h3>
+          <p>Backend, platform and delivery engineering for teams that need to ship faster without lowering the bar.</p>
+          <ul>
+            <li>Platform and infrastructure build-outs</li>
+            <li>Service decomposition and migration</li>
+            <li>CI, test strategy and release engineering</li>
+            <li>Code review and architecture audits</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="ico"><svg><use href="#i-ai"/></svg></div>
+          <h3>AI</h3>
+          <p>Production AI systems with evaluation, cost control and a rollback plan, not demos that stop at the notebook.</p>
+          <ul>
+            <li>Agent and workflow design with Claude and other models</li>
+            <li>Retrieval, evaluation harnesses and guardrails</li>
+            <li>Internal copilots and developer tooling</li>
+            <li>Model and vendor selection with real benchmarks</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="ico"><svg><use href="#i-leadership"/></svg></div>
+          <h3>Leadership</h3>
+          <p>Fractional and interim engineering leadership for teams between leaders, or growing faster than their structure.</p>
+          <ul>
+            <li>Fractional CTO and VP Engineering</li>
+            <li>Team structure, hiring loops and levelling</li>
+            <li>Roadmap and delivery operating cadence</li>
+            <li>Coaching for first-time engineering managers</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="ico"><svg><use href="#i-security"/></svg></div>
+          <h3>Security</h3>
+          <p>Security work done by engineers, so findings arrive with fixes and the fixes arrive in pull requests.</p>
+          <ul>
+            <li>Threat modelling and secure design review</li>
+            <li>Vulnerability and dependency management</li>
+            <li>Incident readiness and log investigation</li>
+            <li>Compliance evidence without the theatre</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band" id="deliver" aria-labelledby="deliver-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="deliver-h">What we deliver, practice by practice.</h2>
+        <p>Every engagement is some mix of four things: tooling we set up for you, professional services we run, quality engineers who join your team, and specialized tools we build and bring. Move across a row to see how one practice shows up in each.</p>
+      </div>
+      <div class="matrix-wrap">
+        <div class="matrix" id="matrix" role="table" aria-label="Deliverables by practice and engagement type">
+          <div class="corner" role="columnheader"><span>Practice</span><span>by engagement type</span></div>
+          <div class="col" role="columnheader" data-c="1">Tooling<small>we set up and hand over</small></div>
+          <div class="col" role="columnheader" data-c="2">Professional services<small>we run end to end</small></div>
+          <div class="col" role="columnheader" data-c="3">Quality engineers<small>embedded in your team</small></div>
+          <div class="col" role="columnheader" data-c="4">Specialized tools<small>we build and bring</small></div>
+
+          <div class="row" role="rowheader" data-r="1"><svg><use href="#i-engineering"/></svg>Engineering</div>
+          <div class="cell" data-r="1" data-c="1" role="cell"><b>Delivery pipeline</b>CI, preview environments, release gates and the dashboards to watch them.</div>
+          <div class="cell" data-r="1" data-c="2" role="cell"><b>Migration projects</b>Monolith splits, cloud moves and framework upgrades, scoped and shipped.</div>
+          <div class="cell" data-r="1" data-c="3" role="cell"><b>Senior engineers</b>Staff-level contributors who take tickets, review code and raise the standard.</div>
+          <div class="cell" data-r="1" data-c="4" role="cell"><b>Codebase grading</b>Fifteen-dimension health scorecards and platform dependency maps for any repo or org.</div>
+
+          <div class="row" role="rowheader" data-r="2"><svg><use href="#i-ai"/></svg>AI</div>
+          <div class="cell" data-r="2" data-c="1" role="cell"><b>Evaluation harness</b>Offline evals, prompt versioning and cost tracking wired into your CI.</div>
+          <div class="cell" data-r="2" data-c="2" role="cell"><b>Agent builds</b>Production agents and copilots with guardrails, observability and a rollback plan.</div>
+          <div class="cell" data-r="2" data-c="3" role="cell"><b>AI engineers</b>People who have shipped model-backed features and know where they fail.</div>
+          <div class="cell" data-r="2" data-c="4" role="cell"><b>Internal copilots</b>Purpose-built assistants over your docs, logs and tickets.</div>
+
+          <div class="row" role="rowheader" data-r="3"><svg><use href="#i-leadership"/></svg>Leadership</div>
+          <div class="cell" data-r="3" data-c="1" role="cell"><b>Operating cadence</b>Planning, review and incident rituals set up with the templates to run them.</div>
+          <div class="cell" data-r="3" data-c="2" role="cell"><b>Fractional leadership</b>Interim CTO or VP Engineering, two to three days a week, with a handover date.</div>
+          <div class="cell" data-r="3" data-c="3" role="cell"><b>Tech leads</b>Leads who run a squad, mentor the engineers and leave a successor behind.</div>
+          <div class="cell" data-r="3" data-c="4" role="cell"><b>Delivery dashboards</b>Flow, reliability and hiring views your leadership team actually reads.</div>
+
+          <div class="row" role="rowheader" data-r="4"><svg><use href="#i-security"/></svg>Security</div>
+          <div class="cell" data-r="4" data-c="1" role="cell"><b>Vulnerability management</b>Scanning, triage queues and SLAs wired to the tools you already use.</div>
+          <div class="cell" data-r="4" data-c="2" role="cell"><b>Assessments and readiness</b>Threat models, design reviews and incident exercises with written fixes.</div>
+          <div class="cell" data-r="4" data-c="3" role="cell"><b>Security engineers</b>Engineers who close findings in pull requests, not in spreadsheets.</div>
+          <div class="cell" data-r="4" data-c="4" role="cell"><b>Threat watch and investigation</b>A live exploitation observatory and an incident workspace, both running on this site.</div>
+        </div>
+      </div>
+      <p class="matrix-note">Every cell is something we have done or built. The full list of what we can run for you, area by area, is on the <a href="services.html">services page</a>.</p>
+    </div>
+  </section>
+
+  <section class="block band" id="engage" aria-labelledby="engage-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="engage-h">Three ways to work with us.</h2>
+        <p>Pick the shape that matches the problem. All three come with a named lead, a weekly written update, and an end date we agree up front.</p>
+      </div>
+      <div class="engage">
+        <article class="model">
+          <h3>Embedded team</h3>
+          <p>One to four of our engineers join your team on your tools and your cadence. Billed monthly, rolled off as your hires land.</p>
+          <div class="fit">Fits: a roadmap that is bigger than the team, or a skill gap you cannot hire for in time.</div>
+        </article>
+        <article class="model">
+          <h3>Fixed-scope project</h3>
+          <p>A defined outcome, a fixed price, and a handover that includes the documentation and the people who will own it.</p>
+          <div class="fit">Fits: migrations, assessments, an evaluation harness, a first production agent.</div>
+        </article>
+        <article class="model">
+          <h3>Advisory and fractional leadership</h3>
+          <p>A senior leader on a retainer, from a few hours a month to three days a week, with a successor plan from day one.</p>
+          <div class="fit">Fits: a team between leaders, a board that wants a second opinion, a founder who needs a CTO this quarter.</div>
+        </article>
+      </div>
+
+      <h3 style="margin-top:clamp(36px,5vw,64px)">How the first month runs</h3>
+      <div class="steps">
+        <div class="step"><h4 class="small" style="margin:0;font-weight:600">Scope</h4><p>We read the code, the backlog and the incident history before we write a proposal. You get a one-page plan and a price.</p></div>
+        <div class="step"><h4 class="small" style="margin:0;font-weight:600">Embed</h4><p>Our people get access, join standup and pick up real work. Tools are installed and pointed at your systems.</p></div>
+        <div class="step"><h4 class="small" style="margin:0;font-weight:600">Deliver</h4><p>First pull requests, first findings closed, first dashboard live. The weekly update starts and does not stop.</p></div>
+        <div class="step"><h4 class="small" style="margin:0;font-weight:600">Review</h4><p>We show what shipped, what we learned, and whether the scope still holds. You decide what month two looks like.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block join" id="join" aria-labelledby="join-h">
+    <div class="wrap">
+      <div>
+        <h2 id="join-h">Want to be one of the people we send?</h2>
+        <p>We hire senior engineers, security people, AI builders and leaders who would rather ship for clients than sit in a bench. Browse open roles or send a general application.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="careers.html">See open roles</a>
+        <a class="btn ghost" href="careers.html#apply">Send a general application</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block cta" id="cta" aria-labelledby="cta-h">
+    <div class="wrap">
+      <h2 id="cta-h">Tell us what is in the way.</h2>
+      <p class="lede">A thirty-minute call is usually enough to tell you whether we are the right people, and who is if we are not. No deck, no discovery workshop.</p>
+      <div class="hero-actions">
+        <a class="btn" href="contact.html">Book a call</a>
+        <a class="btn ghost" href="services.html">See every service</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Raven Guard Consulting</span>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="careers.html">Careers</a>
+    <span class="spacer"></span>
+    <span>Engineering, AI, leadership and security.</span>
+  </div>
+</footer>
+
+<script src="js/perimeter.js" defer></script>
+<script src="js/raven.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<!--!
+  Threat Pulse
+  Copyright (c) 2026 Cliff Pyles
+  Released under the MIT License: https://opensource.org/license/mit
+  Original: https://codepen.io/editor/cliffpyles/pen/01a1b748-091b-7303-b14c-0aff50bb8692
+-->
+<html lang="en">
+  <head>
+<script type="importmap">
+{
+  "imports": {
+    "@tabler/icons-react": "https://esm.sh/@tabler/icons-react@3.50.0?deps=react@19.3.1",
+    "@tabler/icons-react/": "https://esm.sh/@tabler/icons-react@3.50.0/",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@5.107.1?deps=react@19.3.1",
+    "@tanstack/react-query/": "https://esm.sh/@tanstack/react-query@5.107.1/",
+    "@tanstack/react-router": "https://esm.sh/@tanstack/react-router@1.170.46?deps=react@19.3.1,react-dom@19.3.1",
+    "@tanstack/react-router/": "https://esm.sh/@tanstack/react-router@1.170.46/",
+    "d3": "https://esm.sh/d3@7.9.2",
+    "d3/": "https://esm.sh/d3@7.9.2/",
+    "gsap": "https://esm.sh/gsap@3.15.1",
+    "gsap/": "https://esm.sh/gsap@3.15.1/",
+    "idb-keyval": "https://esm.sh/idb-keyval@6.3.0",
+    "idb-keyval/": "https://esm.sh/idb-keyval@6.3.0/",
+    "react": "https://esm.sh/react@19.3.1",
+    "react-dom": "https://esm.sh/react-dom@19.3.1",
+    "react-dom/": "https://esm.sh/react-dom@19.3.1/",
+    "react/": "https://esm.sh/react@19.3.1/",
+    "zod": "https://esm.sh/zod@4.6.7",
+    "zod/": "https://esm.sh/zod@4.6.7/"
+  }
+}
+</script>
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="Cliff Pyles" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+    />
+    <link rel="stylesheet" href="./app/tokens.css" />
+    <link rel="stylesheet" href="./app/styles.css" />
+    
+  </head>
+  <body>
+    <div id="root">
+      <p id="startup-status" class="startup" role="status">
+        Calibrating stations…
+      </p>
+    </div>
+    <script>
+      (() => {
+        const report = (message) => {
+          const status = document.getElementById("startup-status");
+          if (status) {
+            status.textContent = `Threat Pulse could not start: ${message}`;
+            status.dataset.state = "error";
+          }
+        };
+        window.addEventListener(
+          "error",
+          (event) => {
+            const target = event.target;
+            if (target && target.tagName === "SCRIPT") {
+              report(`a script failed to load (${target.src})`);
+            } else if (event.message) {
+              report(event.message);
+            }
+          },
+          true
+        );
+        window.addEventListener("unhandledrejection", (event) => {
+          report(String(event.reason?.message ?? event.reason));
+        });
+      })();
+    </script>
+    <script type="module" src="./app/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://assets.commonletter.com/codepen.css"
+      media="print"
+      referrerpolicy="no-referrer-when-downgrade"
+    />
+  </body>
+</html>

@@ -565,3 +565,66 @@ main { flex: 1 0 auto; }
   .join .hero-actions { flex-wrap: wrap; }
   .jobs-count { margin-left: 0; width: 100%; }
 }
+
+/* ---------- tooling: benefits, catalog, integration steps ---------- */
+.benefits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.benefit {
+  padding: 22px 22px 24px;
+  background: var(--night-2);
+  border: 1px solid var(--line);
+  border-radius: var(--nub) var(--sweep) var(--nub) var(--nub);
+  display: grid; gap: 8px; align-content: start;
+}
+.benefit h3 { font-size: 1.1rem; }
+.benefit p { color: var(--bone-2); font-size: 0.95rem; }
+
+.catalog { display: grid; gap: clamp(32px, 4vw, 48px); }
+.catalog-group h3 {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 1.35rem; margin-bottom: 14px;
+}
+.catalog-group h3 svg {
+  width: 36px; height: 36px; padding: 8px;
+  background: var(--night); border: 1px solid var(--steel);
+  border-radius: var(--nub) 12px var(--nub) var(--nub);
+  stroke: var(--plume); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+}
+.catalog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tool-card {
+  padding: 24px 26px 26px;
+  background: var(--night-2);
+  border: 1px solid var(--line);
+  border-radius: var(--nub) var(--sweep) var(--nub) var(--nub);
+  display: grid; gap: 10px; align-content: start;
+}
+.tool-card h4 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+.tool-card > p { color: var(--bone-2); }
+.tool-card dl { margin: 6px 0 0; display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 8px 16px; font-size: 0.93rem; padding-top: 12px; border-top: 1px solid var(--line); }
+.tool-card dt { color: var(--plume); font-weight: 560; }
+.tool-card dd { margin: 0; color: var(--bone-2); }
+
+.steps.plain .step::before { content: "Step " counter(step); }
+
+/* home strip for the catalog */
+.tooling-strip .wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px 40px; align-items: center;
+  padding: 28px 32px;
+  background: var(--vault);
+  border: 1px solid var(--steel);
+  border-radius: var(--nub) var(--sweep) var(--nub) var(--nub);
+}
+.tooling-strip h2 { font-size: 1.5rem; max-width: none; }
+.tooling-strip p { color: var(--bone-2); max-width: 60ch; margin-top: 6px; }
+.tooling-strip .hero-actions { flex-wrap: nowrap; }
+
+@media (max-width: 960px) {
+  .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .catalog-grid { grid-template-columns: 1fr; }
+  .tooling-strip .wrap { grid-template-columns: 1fr; }
+  .tooling-strip .hero-actions { flex-wrap: wrap; }
+}
+@media (max-width: 760px) {
+  .benefits { grid-template-columns: 1fr; }
+  .tool-card dl { grid-template-columns: 1fr; gap: 2px 0; }
+  .tool-card dd { margin-bottom: 8px; }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'self'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooling | Raven Guard Consulting</title>
+  <meta name="description" content="The tools Raven Guard brings to every engagement, what they do for an enterprise, and how we deploy them inside your systems.">
+  <meta name="theme-color" content="#16161D">
+  <link rel="stylesheet" href="css/raven.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74' fill='%236a329f'/%3E%3Ccircle cx='57' cy='37' r='4' fill='%2316161D'/%3E%3C/svg%3E">
+</head>
+<body>
+<canvas id="perimeter" aria-hidden="true"></canvas>
+
+<svg class="sprite" width="0" height="0" aria-hidden="true">
+  <symbol id="i-engineering" viewBox="0 0 24 24">
+    <rect x="3" y="14" width="7" height="7" rx="1"/>
+    <rect x="10" y="7" width="7" height="7" rx="1"/>
+    <rect x="14" y="3" width="7" height="4" rx="1"/>
+    <path d="M3 10h4M17 17h4"/>
+  </symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24">
+    <circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
+    <path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/>
+  </symbol>
+  <symbol id="i-leadership" viewBox="0 0 24 24">
+    <path d="M12 3l2.2 5.2L20 9l-4 3.9.9 5.6L12 15.8 7.1 18.5 8 12.9 4 9l5.8-.8z"/>
+    <path d="M12 3v12.8"/>
+  </symbol>
+  <symbol id="i-security" viewBox="0 0 24 24">
+    <path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/>
+    <path d="M9 12l2 2 4-4"/>
+  </symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Raven Guard Consulting, home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="18,62 30,30 52,22 70,30 96,40 70,46 72,60 60,78 40,82 24,74" fill="#6a329f"/>
+        <polygon points="30,30 52,22 70,30 70,46 52,44" fill="#8247BD"/>
+        <circle cx="57" cy="37" r="4" fill="#16161D"/>
+      </svg>
+      <span>Raven Guard<small>Consulting</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg><use href="#i-menu"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Pages">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="tooling.html" aria-current="page">Tooling</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <a class="btn" href="contact.html">Book a call</a>
+  </div>
+</header>
+
+<main id="top" class="page">
+
+  <section class="block tooling" id="catalog" aria-labelledby="tooling-h">
+    <div class="wrap">
+      <div class="page-head">
+        <h1 id="tooling-h">Tools we bring, built from the work.</h1>
+        <p class="lede">Every tool in this catalog started as something a client needed and nobody sold. We built it, hardened it on the next engagement, and now we deploy it inside your environment on day one. You keep it when we leave.</p>
+      </div>
+
+      <div class="benefits" aria-label="Why enterprises use our tooling">
+        <div class="benefit">
+          <h3>Day-one velocity</h3>
+          <p>No six-week tooling project before the real work starts. The scorecard, the scanner, the test studio and the dashboards are running in your environment in the first week.</p>
+        </div>
+        <div class="benefit">
+          <h3>You own it</h3>
+          <p>Everything runs on your infrastructure. No SaaS subscription, no per-seat pricing, no data leaving your network. Source, documentation and a trained owner are part of the handover.</p>
+        </div>
+        <div class="benefit">
+          <h3>Built for regulated environments</h3>
+          <p>API keys stay server-side, credentials sit in an encrypted vault, analysis runs with zero egress where it must, and every report is self-contained so it can be filed as evidence.</p>
+        </div>
+        <div class="benefit">
+          <h3>Evidence, not opinion</h3>
+          <p>Each tool produces a graded report or a live dashboard with the calculation explained on the page. Leadership gets numbers they can challenge, not a slide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band" id="tools-list" aria-labelledby="list-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="list-h">The catalog</h2>
+        <p>Grouped by the practice that uses it most. Most engagements combine two or three.</p>
+      </div>
+
+      <div class="catalog">
+
+        <div class="catalog-group">
+          <h3><svg aria-hidden="true"><use href="#i-security"/></svg>Security</h3>
+          <div class="catalog-grid">
+            <article class="tool-card">
+              <h4>Security Toolbox</h4>
+              <p>A self-hosted security console with thirty-seven tools across discovery, exposure, breach checks, threat intelligence, OSINT, local network inventory, forensics and encryption.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>One place for the everyday checks your security team runs by hand today, with keys held server-side and results that can be filed.</dd>
+                <dt>Integrates with</dt><dd>Shodan, NVD, VirusTotal, AbuseIPDB, GreyNoise, certificate logs, your SIEM via export, nmap and arp-scan on the host.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>PassPass credential vault</h4>
+              <p>A credential vault and token authentication service with a REST API, built for teams whose automations need secrets as much as their people do.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Ends shared spreadsheets and chat-pasted passwords. Tokens are issued, validated and revoked through one audited service.</dd>
+                <dt>Integrates with</dt><dd>CI pipelines, automation runners, AWS deployment, any service that can call a REST endpoint.</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalog-group">
+          <h3><svg aria-hidden="true"><use href="#i-engineering"/></svg>Engineering</h3>
+          <div class="catalog-grid">
+            <article class="tool-card">
+              <h4>Codebase Scorecard</h4>
+              <p>A zero-dependency dashboard that grades any repository A to F across fifteen quality and security dimensions and, where allowed, drafts the fixes.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>A single objective score for every repo in the estate, with file and line for each finding. Useful for audits, acquisitions and quarterly reviews.</dd>
+                <dt>Integrates with</dt><dd>GitHub, GitLab and any Git host; CI as a gate; OSV and NVD for vulnerabilities; optional AI-assisted remediation.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>System Otel</h4>
+              <p>An OpenTelemetry-native observability engine: one drop-in agent, one engine binary you own, one live dashboard for logs, traces, metrics and build events.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Observability for teams that cannot justify or cannot allow a SaaS monitoring suite. No data leaves the network.</dd>
+                <dt>Integrates with</dt><dd>Any language over OTLP, build and compile pipelines, Python first with more agents on request.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>FrostDeck test studio</h4>
+              <p>A web-based Playwright studio for ServiceNow and similar enterprise UIs: live browser streaming, action recording with resilient locators, page element maps and one-click runs.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Regression coverage for platforms that never had it, with locators that survive upgrades so the suite stays alive after we hand it over.</dd>
+                <dt>Integrates with</dt><dd>ServiceNow instances, Playwright and Robot Framework, CI runners, your existing Selenium, ATF and Playwright scripts via conversion.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Test script converter</h4>
+              <p>Translates Playwright, Selenium, ATF and free-form test scripts into one maintained Robot Framework suite, with a confidence-tagged migration report for every file.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Years of scattered test scripts become one framework your team can run in CI, without rewriting them by hand.</dd>
+                <dt>Integrates with</dt><dd>Your existing test repositories, Robot Framework runners, CI, and the test studio above. Exposed over REST and MCP for headless use.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Platform mappers</h4>
+              <p>Per-platform analysis engines for Salesforce, ServiceNow, Workday, Conga and Veeva: dependency maps, field conflicts, code red flags, schema health and a modernisation backlog, each with a native report. A meta-mapper runs every engine in parallel from one set of connections.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Upgrade and breakage risk scored in minutes before anyone writes a test, and a governance report leadership can act on.</dd>
+                <dt>Integrates with</dt><dd>Live orgs over OAuth or session auth, with a simulate mode when a connection is not yet approved. ServiceNow adds AI explanation, coverage and test generation.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>MapOps desktop</h4>
+              <p>The mapper engines packaged as a self-contained desktop app with its own encrypted connection portal, in-app pulls, downloadable report bundles and a field-mapping studio. An admin build provisions and controls a fleet of them.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Analysts and field teams run platform analysis with nothing installed and no server to stand up. Secrets never leave the machine.</dd>
+                <dt>Integrates with</dt><dd>Salesforce, ServiceNow, Workday, Conga, Veeva, GitHub, GitLab and Jira pulls, on macOS and Windows.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Connection Fabric</h4>
+              <p>A central portal and service that connects SaaS platforms, holds credentials in an encrypted vault, links records across systems and runs automations such as a case in one system creating a linked incident in another.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Cross-platform workflows without another integration platform licence, embeddable in your own products through its REST API.</dd>
+                <dt>Integrates with</dt><dd>ServiceNow, Salesforce, Workday, Jira, GitHub, GitLab, Slack, Conga and Veeva through a pluggable adapter framework.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Migration console</h4>
+              <p>A record migration console that recommends field and value maps, understands module modes such as ITSM, CMDB and CPQ, scopes by batch, percentage or filter, and runs dry-run, upsert and rollback with a project split plan and runbook.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Platform consolidations and cross-system moves with a rehearsal, a rollback and a runbook, instead of a weekend and a prayer.</dd>
+                <dt>Integrates with</dt><dd>Connection Fabric connections, including cross-platform moves such as ServiceNow or Salesforce into Jira.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Smosher compression</h4>
+              <p>Content-defined chunking, content-addressed deduplication and zstd compression into bundles with a rebuild graph, optional encryption, delta receipts for data feeds and a live monitor.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Large exports, backups and evidence bundles shrink and ship with proof of what changed since last time.</dd>
+                <dt>Integrates with</dt><dd>File systems, data feeds and output routes you define, with a streaming monitor for operators.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Unified toolbox portal</h4>
+              <p>One web shell that hosts every tool above as a self-contained module: a single sign-in, shared settings and accessibility options, a documentation hub and a guided tour for new users.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Your teams get one portal instead of a dozen bookmarks, and each module can be lifted into another product with minimal surgery.</dd>
+                <dt>Integrates with</dt><dd>Your identity provider, your logging, and any of the tools in this catalog.</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalog-group">
+          <h3><svg aria-hidden="true"><use href="#i-ai"/></svg>AI</h3>
+          <div class="catalog-grid">
+            <article class="tool-card">
+              <h4>Agent Performance Lab</h4>
+              <p>A QA sandbox for AI agents: prompt library with expected answers, parallel multi-agent runs, manual scoring on six dimensions, baselines, trends and scorecards. An evaluator spins up isolated test workspaces and runs a golden scenario corpus repeatedly against candidate agents.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Proof that the agent got better, not worse, after every change. The scorecard is readable by leadership and defensible to audit.</dd>
+                <dt>Integrates with</dt><dd>Any agent with an HTTP endpoint, your test corpus from spreadsheets, CI for regression gates.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>Grounded AI console</h4>
+              <p>A chat console that answers from your documentation and acts on your live systems through governed connections, exposed as a REST API and an MCP server.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>An internal copilot that reads your real data with read and write governance, egress guards and per-run telemetry, instead of a public chatbot with a prompt.</dd>
+                <dt>Integrates with</dt><dd>Claude and other models, Connection Fabric for live systems, your documentation via capture to Markdown, any MCP-capable client.</dd>
+              </dl>
+            </article>
+            <article class="tool-card">
+              <h4>AI usage and billing simulator</h4>
+              <p>A fixed-seed traffic simulator that compares metering models across customer sizes and time horizons, producing self-contained HTML and PDF reports.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Price or package an AI feature with numbers instead of guesses. See which customers run out of allowance and when, before the contract is signed.</dd>
+                <dt>Integrates with</dt><dd>Your usage exports, your pricing assumptions, your board deck.</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalog-group">
+          <h3><svg aria-hidden="true"><use href="#i-leadership"/></svg>Leadership</h3>
+          <div class="catalog-grid">
+            <article class="tool-card">
+              <h4>Executive dashboards</h4>
+              <p>Self-contained dashboards for the executive, the team and the system: KPIs, usage, agent scorecards and support case analysis, each with a legend that explains every number.</p>
+              <dl>
+                <dt>Enterprise benefit</dt><dd>Reports that get read because the calculation is on the page. One file, no login, prints cleanly for the board pack.</dd>
+                <dt>Integrates with</dt><dd>CSV and spreadsheet exports from your ticketing, HR and usage systems, rebuilt on a schedule.</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="integrate" aria-labelledby="integrate-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="integrate-h">How we integrate them into your systems</h2>
+        <p>The same four steps every time. Each one ends with something you can see.</p>
+      </div>
+      <div class="steps plain">
+        <div class="step"><h4 class="step-h">Assess fit</h4><p>We look at your environment, your controls and your existing tools, and pick what belongs. Some tools will not fit. We say so.</p></div>
+        <div class="step"><h4 class="step-h">Deploy inside your walls</h4><p>Installed on your infrastructure, in your cloud or on a box in your data centre, with your identity provider and your logging.</p></div>
+        <div class="step"><h4 class="step-h">Connect to your systems</h4><p>Credentials go into the vault, connections are wired to the platforms you run, and the first real report or dashboard comes off your data.</p></div>
+        <div class="step"><h4 class="step-h">Hand over</h4><p>Source, documentation, a runbook and a named owner on your side who has run it with us. The tool stays. We do not need to.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block cta" id="get-it" aria-labelledby="get-h">
+    <div class="wrap">
+      <h2 id="get-h">Interested in our tooling?</h2>
+      <p class="lede">Thirty minutes is enough to tell you which tools fit your environment and how fast they can be running. Schedule time and get it today.</p>
+      <div class="hero-actions">
+        <a class="btn" href="contact.html">Schedule time to get it today</a>
+        <a class="btn ghost" href="services.html">See the services behind it</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Raven Guard Consulting</span>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="tooling.html">Tooling</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="careers.html">Careers</a>
+    <span class="spacer"></span>
+    <span>Engineering, AI, leadership and security.</span>
+  </div>
+</footer>
+
+<script src="js/perimeter.js" defer></script>
+<script src="js/raven.js" defer></script>
+</body>
+</html>
